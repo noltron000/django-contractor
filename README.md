@@ -11,6 +11,10 @@ See `LICENSE.md` for more information.
 ## Run Tests
 1. `python manage.py test <app>`
 
+## Polls API
+- `GET /api/polls/` lists up to 20 questions.
+- `GET /api/polls/<id>` returns one question.
+
 ## Update Database Structure
 1. Run `python manage.py migrate`.
 1. Make your changes to the database models.
