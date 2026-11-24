@@ -4,12 +4,19 @@ Completed by Nolan Kovacik.
 See `LICENSE.md` for more information.
 
 ## Run Locally
-1. Fork or clone this project from GitHub.
-1. `cd` into the downloaded project root directory.
-1. Run `python manage.py runserver`.
+Requires Python 3.10 or later.
+
+1. Fork or clone this project and `cd` into its root directory.
+1. Create a virtual environment: `python -m venv .venv`.
+1. Activate it: `.venv\Scripts\Activate.ps1` in PowerShell, or `source .venv/bin/activate` on macOS/Linux.
+1. Install dependencies: `python -m pip install -r requirements.txt`.
+1. Apply migrations: `python manage.py migrate`.
+1. Start the server: `python manage.py runserver` and visit `http://127.0.0.1:8000/polls/`.
+
+The SQLite database is tracked in Git. Back it up before migrating if you need to preserve its contents.
 
 ## Run Tests
-1. `python manage.py test <app>`
+1. `python manage.py test`
 
 ## Polls API
 - `GET /api/polls/` lists up to 20 questions.
